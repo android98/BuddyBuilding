@@ -1,5 +1,6 @@
 package com.example.buddybuilding.activities;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.VideoView;
 
 import com.example.buddybuilding.R;
 
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 
 
 public class PlayVideoActivity extends AppCompatActivity {
@@ -21,10 +23,19 @@ public class PlayVideoActivity extends AppCompatActivity {
         videoView = findViewById(R.id.vdVw);
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);
-        Uri uri = Uri.parse("https://as7.cdn.asset.aparat.com/aparat-video/a912805435ca815f5d1ea52fadd026ca8259796-144p__83669.mp4");
+        Uri uri = Uri.parse("http://lifemag.ir/wp-content/uploads/2012/09/laghar-kardane-shekam-37.gif");
         videoView.setMediaController(mediaController);
         videoView.setVideoURI(uri);
         videoView.requestFocus();
         videoView.start();
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(PlayVideoActivity.this,MainActivity.class);
+        intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP);
+        finish();
+        startActivity(intent);
+    }
+
 }

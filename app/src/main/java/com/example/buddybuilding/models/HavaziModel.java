@@ -8,7 +8,14 @@ public class HavaziModel extends RealmObject {
 
     @PrimaryKey
     public int id;
-    public String name, url;
+    public String name, url,information;
+
+    public HavaziModel(int id, String name, String url, String information) {
+        this.id = id;
+        this.name = name;
+        this.url = url;
+        this.information = information;
+    }
 
     public HavaziModel(int id, String name, String url) {
         this.id = id;
@@ -41,5 +48,13 @@ public class HavaziModel extends RealmObject {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getInformation() {
+        return information;
+    }
+
+    public void setInformation(String information) {
+        this.information = information;
     }
 }

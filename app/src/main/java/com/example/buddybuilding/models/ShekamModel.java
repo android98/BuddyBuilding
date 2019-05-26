@@ -7,12 +7,21 @@ public class ShekamModel extends RealmObject {
 
     @PrimaryKey
     public int id;
-    public String name, url;
+    public String name, url,information;
 
-    public ShekamModel(int id, String name, String url) {
+    public ShekamModel(int id, String name, String url, String information) {
         this.id = id;
         this.name = name;
         this.url = url;
+        this.information = information;
+    }
+
+    public String getInformation() {
+        return information;
+    }
+
+    public void setInformation(String information) {
+        this.information = information;
     }
 
     public ShekamModel() {
