@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.buddybuilding">
-<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".tools.MyApplication"
         android:allowBackup="true"
@@ -10,8 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PlayVideoActivity"></activity>
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.RecyclerViewZirBaqalListActivity"></activity>
+        <activity android:name=".activities.RecyclerViewShekamListActivity" />
+        <activity android:name=".activities.RecyclerViewSarShooneListActivity" />
+        <activity android:name=".activities.RecyclerViewSaedListActivity" />
+        <activity android:name=".activities.RecyclerViewPoshBazooListActivity" />
+        <activity android:name=".activities.RecyclerViewPaaListActivity" />
+        <activity android:name=".activities.RecyclerViewPahlooListActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.PlayVideoActivity" />
+        <activity android:name=".activities.RecyclerViewJoloBazooListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
