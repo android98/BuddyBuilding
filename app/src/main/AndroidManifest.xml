@@ -19,9 +19,9 @@
         <activity android:name=".activities.RecyclerViewPoshBazooListActivity" />
         <activity android:name=".activities.RecyclerViewPaaListActivity" />
         <activity android:name=".activities.RecyclerViewPahlooListActivity" />
-        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.RecyclerViewJoloBazooListActivity" />
         <activity android:name=".activities.PlayVideoActivity" />
-        <activity android:name=".activities.RecyclerViewJoloBazooListActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

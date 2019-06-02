@@ -1,5 +1,6 @@
 package com.example.buddybuilding.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -59,10 +60,10 @@ public class MainActivity extends AppCompatActivity {
                         .findAll();
 
                 for (int i = 0; i < results.size(); i++) {
-                    Log.d("runn", "execute: "+results.get(i).getId());
-                    Log.d("runn", "execute: "+results.get(i).getName());
-                    Log.d("runn", "execute: "+results.get(i).getUrl());
-                    Log.d("runn", "execute: "+results.get(i).information);
+                    Log.d("runn", "execute: " + results.get(i).getId());
+                    Log.d("runn", "execute: " + results.get(i).getName());
+                    Log.d("runn", "execute: " + results.get(i).getUrl());
+                    Log.d("runn", "execute: " + results.get(i).information);
                 }
 
 
@@ -73,8 +74,38 @@ public class MainActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "" +
-                        names[position], Toast.LENGTH_SHORT).show();
+                if (names[position] == "حرکات پهلو") {
+                    Intent intent = new Intent(MainActivity.this, RecyclerViewPahlooListActivity.class);
+                    startActivity(intent);
+                }
+                if (names[position] == "حرکات جلو بازو") {
+                    Intent intent = new Intent(MainActivity.this, RecyclerViewJoloBazooListActivity.class);
+                    startActivity(intent);
+                }
+                if (names[position] == "حرکات پا") {
+                    Intent intent = new Intent(MainActivity.this, RecyclerViewPahlooListActivity.class);
+                    startActivity(intent);
+                }
+                if (names[position] == "حرکات سرشانه") {
+                    Intent intent = new Intent(MainActivity.this, RecyclerViewSarShooneListActivity.class);
+                    startActivity(intent);
+                }
+                if (names[position] == "حرکات زیر بقل") {
+                    Intent intent = new Intent(MainActivity.this, RecyclerViewZirBaqalListActivity.class);
+                    startActivity(intent);
+                }
+                if (names[position] == "حرکات پشت بازو") {
+                    Intent intent = new Intent(MainActivity.this, RecyclerViewPoshBazooListActivity.class);
+                    startActivity(intent);
+                }
+                if (names[position] == "حرکات شکم ") {
+                    Intent intent = new Intent(MainActivity.this, RecyclerViewShekamListActivity.class);
+                    startActivity(intent);
+                }
+                if (names[position] == "حرکات ساعد") {
+                    Intent intent = new Intent(MainActivity.this, RecyclerViewSaedListActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
