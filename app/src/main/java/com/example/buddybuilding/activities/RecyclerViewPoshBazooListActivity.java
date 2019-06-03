@@ -7,6 +7,8 @@ import com.example.buddybuilding.R;
 
 public class RecyclerViewPoshBazooListActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

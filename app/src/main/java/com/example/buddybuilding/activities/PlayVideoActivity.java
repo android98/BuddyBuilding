@@ -21,7 +21,7 @@ import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 
 public class PlayVideoActivity extends AppCompatActivity {
 
-    int Id = -1;
+    int id = -1;
     VideoView videoView;
     private TextView txtname, txtinf;
     public RealmResults<JolobazooModel> results;
@@ -31,31 +31,37 @@ public class PlayVideoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_video);
         Bind();
-        QueryDB();
+
 
 
         Intent intent = getIntent();
-        Id = intent.getIntExtra("id", -1);
-        Toast.makeText(this, "id : " + Id, Toast.LENGTH_SHORT).show();
+        id = intent.getIntExtra("id", -1);
+        Toast.makeText(this, "id : " + id, Toast.LENGTH_SHORT).show();
 
 
-        MediaController mediaController = new MediaController(this);
-        mediaController.setAnchorView(videoView);
-        Uri uri = Uri.parse("https://www.gymextreme.ir/wp-content/uploads/2018/06/Chest-Supported-T-Bar-Row.mp4");
-        videoView.setMediaController(mediaController);
-        videoView.setVideoURI(uri);
-        videoView.requestFocus();
-        videoView.start();
+
+        QueryDB();
+
+
     }
 
     private void QueryDB() {
         Realm realm = Realm.getDefaultInstance();
         results = realm.where(JolobazooModel.class)
-                .equalTo("id", Id).findAll();
+                .equalTo("id", id).findAll();
         for (int i = 0; i < results.size(); i++) {
             Log.d("testts", "QueryDB: "+results);
+            MediaController mediaController = new MediaController(this);
+            mediaController.setAnchorView(videoView);
+            Uri uri = Uri.parse(results.get(i).getUrl());
+            videoView.setMediaController(mediaController);
+            videoView.setVideoURI(uri);
+            videoView.requestFocus();
+            videoView.start();
+
             txtname.setText(results.get(i).getName());
             txtinf.setText(results.get(i).getInformation());
+
         }
     }
 
