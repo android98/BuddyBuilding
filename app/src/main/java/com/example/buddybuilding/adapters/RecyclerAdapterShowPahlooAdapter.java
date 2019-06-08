@@ -1,6 +1,7 @@
 package com.example.buddybuilding.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.buddybuilding.BR;
 import com.example.buddybuilding.R;
+import com.example.buddybuilding.activities.PlayVideoActivity;
 import com.example.buddybuilding.databinding.ActivityInnerRecyclerPahlooBinding;
 import com.example.buddybuilding.models.PahlooModel;
 import com.example.buddybuilding.tools.PahlooClickListener;
@@ -53,7 +55,10 @@ public class RecyclerAdapterShowPahlooAdapter extends RecyclerView.Adapter
     @Override
     public void Clicked(PahlooModel pahlooModel) {
         Log.d("Clicked", "Clicked: " + pahlooModel.getName());
-
+        Intent intent = new Intent(context, PlayVideoActivity.class);
+        intent.putExtra("id", pahlooModel.id);
+        intent.putExtra("name", pahlooModel.name);
+        context.startActivity(intent);
     }
 
 

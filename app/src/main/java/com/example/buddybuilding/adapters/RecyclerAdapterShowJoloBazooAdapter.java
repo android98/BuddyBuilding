@@ -63,6 +63,7 @@ public class RecyclerAdapterShowJoloBazooAdapter extends
         Log.d("Clicked", "Clicked: " + jolobazooModel.getName());
         Intent intent = new Intent(context, PlayVideoActivity.class);
         intent.putExtra("id", jolobazooModel.id);
+        intent.putExtra("name", jolobazooModel.name);
         context.startActivity(intent);
 
     }

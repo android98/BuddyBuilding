@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.RecyclerViewZirBaqalListActivity"></activity>
+        <activity android:name=".activities.BMIActivity"></activity>
+        <activity android:name=".activities.RecyclerViewZirBaqalListActivity" />
         <activity android:name=".activities.RecyclerViewShekamListActivity" />
         <activity android:name=".activities.RecyclerViewSarShooneListActivity" />
         <activity android:name=".activities.RecyclerViewSaedListActivity" />
