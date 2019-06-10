@@ -11,8 +11,11 @@
             android:title="محاسه BMI">
         </item>
 
+        <item android:id="@+id/bmr"
+            android:title="محاسبه BMR">
+        </item>
+
         <item android:id="@+id/aboutus"
-            android:icon="@drawable/shekam"
             android:title="درباره ما">
         </item>
     </group>

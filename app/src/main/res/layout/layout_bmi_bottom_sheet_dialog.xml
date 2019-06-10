@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/bnazanin"
+        android:id="@+id/txtbmibottomsheet"
+        android:gravity="center"
+        android:text="  شاخص توده بدنی BMI چیست؟
+
+BMI یا شاخص توده بدنی روشی برای محاسبه میزان چربی های بدن یک فرد بر اساس وزن و قد وی می باشد. با اینکه  BMI یک روش اندازه گیری غیر مستقیم است، اما ثابت شده که در اکثر مردم شاخصی قابل قبول برای محاسبه اضافه وزن به حساب می آید. همچنین به دلیل اینکه محاسبه بی ام ای دقیق کار آسانی است، هر شخص می تواند به راحتی و با قرار دادن قد و وزن خود در فرمول، عدد آن را به دست آورد. امروزه به جای محاسبه BMI به صورت دستی، مردم به محاسبه شاخص توده بدنی انلاین تمایل بیشتری نشان می دهند. "
+        android:textColor="@color/black"
+        android:textSize="19dp" />
+
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="onClick"
+        android:text="خروج"
+        android:textColor="#ec3e7b"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

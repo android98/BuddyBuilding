@@ -5,7 +5,7 @@
     android:gravity="bottom"
     android:orientation="vertical"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:layout_height="176dp">
+    android:layout_height="200dp">
 
     <ImageView
         android:id="@+id/imageView"
@@ -13,14 +13,16 @@
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
         android:layout_gravity="center_vertical"
-        android:src="@drawable/mainpic" />
+        android:src="@drawable/header" />
 
     <TextView
         android:layout_width="match_parent"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:layout_marginTop="10dp"
-        android:text="خوش آمدید"
-        android:textAlignment="center"
+        android:text="ویژگی ها "
+        android:textDirection="rtl"
+        android:fontFamily="@font/bnazanin"
+
         android:layout_height="wrap_content" />
 
 
