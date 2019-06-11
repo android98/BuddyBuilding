@@ -20,6 +20,7 @@
         android:textSize="25dp"
         android:layout_marginTop="10dp"
         android:text="ویژگی ها "
+        android:layout_marginRight="10dp"
         android:textDirection="rtl"
         android:fontFamily="@font/bnazanin"
 

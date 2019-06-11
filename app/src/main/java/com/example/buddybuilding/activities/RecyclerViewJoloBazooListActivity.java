@@ -16,13 +16,14 @@ import com.example.buddybuilding.models.JolobazooModel;
 import com.example.buddybuilding.models.PahlooModel;
 import com.example.buddybuilding.models.SarshooneModel;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
 public class RecyclerViewJoloBazooListActivity extends AppCompatActivity {
 
     ActivityRecyclerViewJoloBazooListBinding binding;
-
+    public CircleImageView profile_image;
 
     private Context context;
     RealmResults<JolobazooModel> jolobazooModels;
@@ -31,7 +32,7 @@ public class RecyclerViewJoloBazooListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view_jolo_bazoo_list);
-
+        profile_image = findViewById(R.id.profile_image);
 
         // Bindign JoloBazoo
         binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_view_jolo_bazoo_list);
@@ -48,6 +49,9 @@ public class RecyclerViewJoloBazooListActivity extends AppCompatActivity {
         RecyclerAdapterShowJoloBazooAdapter adapterShowJoloBazooAdapter =
                 new RecyclerAdapterShowJoloBazooAdapter(jolobazooModels, RecyclerViewJoloBazooListActivity.this);
         binding.setAdapter(adapterShowJoloBazooAdapter);
+
+
+
 
 
     }

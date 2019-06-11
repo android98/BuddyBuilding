@@ -1,6 +1,7 @@
 package com.example.buddybuilding.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.example.buddybuilding.BR;
 import com.example.buddybuilding.R;
+import com.example.buddybuilding.activities.PlayVideoJoloBazooActivity;
+import com.example.buddybuilding.activities.PlayVideoPoshBazoActivity;
 import com.example.buddybuilding.databinding.ActivityInnerRecyclerPoshBazooBinding;
 import com.example.buddybuilding.models.PoshtbazooModel;
 import com.example.buddybuilding.tools.PoshBazooClickListener;
@@ -52,6 +55,11 @@ public class RecyclerAdapterShowPoshBazooAdapter extends
 
     @Override
     public void Clicked(PoshtbazooModel poshtbazooModel) {
+        Intent intent = new Intent(context, PlayVideoPoshBazoActivity.class);
+        intent.putExtra("id", poshtbazooModel.id);
+        intent.putExtra("name", poshtbazooModel.name);
+        context.startActivity(intent);
+
 
     }
 

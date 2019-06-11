@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.buddybuilding.BR;
 import com.example.buddybuilding.R;
-import com.example.buddybuilding.activities.PlayVideoActivity;
+import com.example.buddybuilding.activities.PlayVideoJoloBazooActivity;
 import com.example.buddybuilding.databinding.ActivityInnerRecyclerJoloBazooBinding;
 import com.example.buddybuilding.models.JolobazooModel;
 import com.example.buddybuilding.tools.JoloBazooClickListener;
@@ -61,7 +61,7 @@ public class RecyclerAdapterShowJoloBazooAdapter extends
     @Override
     public void Clicked(JolobazooModel jolobazooModel) {
         Log.d("Clicked", "Clicked: " + jolobazooModel.getName());
-        Intent intent = new Intent(context, PlayVideoActivity.class);
+        Intent intent = new Intent(context, PlayVideoJoloBazooActivity.class);
         intent.putExtra("id", jolobazooModel.id);
         intent.putExtra("name", jolobazooModel.name);
         context.startActivity(intent);
