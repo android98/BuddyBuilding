@@ -1,179 +1,135 @@
 package com.example.buddybuilding.activities;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.TableLayout;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.example.buddybuilding.R;
-import com.example.buddybuilding.adapters.MainGridViewAdapter;
-import com.example.buddybuilding.models.JolobazooModel;
-import com.example.buddybuilding.models.PaModel;
-import com.example.buddybuilding.models.PahlooModel;
-import com.example.buddybuilding.models.PoshtbazooModel;
-import com.example.buddybuilding.models.SaedModel;
-import com.example.buddybuilding.models.SarshooneModel;
-import com.example.buddybuilding.models.ShekamModel;
-import com.example.buddybuilding.models.ZirbaqalModel;
+import com.example.buddybuilding.adapters.MainActivityRecycler1Adapter;
+import com.example.buddybuilding.adapters.MainActivityRecycler2Adapter;
+import com.example.buddybuilding.adapters.MainActivityRecycler4Adapter;
+import com.example.buddybuilding.adapters.MainActivityRecycler5Adapter;
+import com.example.buddybuilding.adapters.MainActivityRecycler6Adapter;
+import com.example.buddybuilding.adapters.MainActivityRecycler7Adapter;
+import com.example.buddybuilding.databinding.ActivityMainBinding;
+import com.example.buddybuilding.models.MokamelAvaliehModel;
+import com.example.buddybuilding.models.MokamelPishrafteModel;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
 
+public class MainActivity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    ActivityMainBinding binding;
 
-    public Toolbar toolbar;
-    public TableLayout tableLayout;
-    public ViewPager viewPager;
-
-    GridView gridView;
-
-    public RealmResults<JolobazooModel> results;
-
-    public String[] names = {"حرکات سرشانه", "حرکات زیر بقل",
-            "حرکات پشت بازو", "حرکات جلو بازو",
-            "حرکات شکم ", "حرکات هوازی", "حرکات پهلو",
-            "حرکات پا", "حرکات ساعد",};
-
-
-    public int[] images = {R.drawable.sarshane, R.drawable.zirbaqal, R.drawable.poshtbazoo,
-            R.drawable.jolobazo, R.drawable.shekam, R.drawable.havazi, R.drawable.pahloo,
-            R.drawable.paaa, R.drawable.saeed};
+    RealmResults<MokamelAvaliehModel> mokamelAvaliehModels;
+    RealmResults<MokamelPishrafteModel> mokamelPishrafteModels1;
+    RealmResults<MokamelPishrafteModel> mokamelPishrafteModels2;
+    RealmResults<MokamelPishrafteModel> mokamelPishrafteModels4;
+    RealmResults<MokamelPishrafteModel> mokamelPishrafteModels5;
+    RealmResults<MokamelPishrafteModel> mokamelPishrafteModels6;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-
-
-        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-
-
-        /*ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-*/
-
-        NavigationView navigationView1 = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-        gridView = findViewById(R.id.grid_view_);
-        MainGridViewAdapter adapter =
-                new MainGridViewAdapter(this, images, names);
-        gridView.setAdapter(adapter);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         Realm realm = Realm.getDefaultInstance();
-        final int id = getNextKey(realm);
-        realm.executeTransaction(new Realm.Transaction() {
-            @Override
-            public void execute(Realm realm) {
-
-                results = realm.where(JolobazooModel.class)
-                        .findAll();
-
-                for (int i = 0; i < results.size(); i++) {
-                    Log.d("runn", "execute: " + results.get(i).getId());
-                    Log.d("runn", "execute: " + results.get(i).getName());
-                    Log.d("runn", "execute: " + results.get(i).getUrl());
-                    Log.d("runn", "execute: " + results.get(i).information);
-                }
-
-
-            }
-        });
-
-
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (names[position] == "حرکات پهلو") {
-                    Intent intent = new Intent(MainActivity.this, RecyclerViewPahlooListActivity.class);
-                    startActivity(intent);
-                }
-                if (names[position] == "حرکات جلو بازو") {
-                    Intent intent = new Intent(MainActivity.this, RecyclerViewJoloBazooListActivity.class);
-                    startActivity(intent);
-                }
-                if (names[position] == "حرکات پا") {
-                    Intent intent = new Intent(MainActivity.this, RecyclerViewPahlooListActivity.class);
-                    startActivity(intent);
-                }
-                if (names[position] == "حرکات سرشانه") {
-                    Intent intent = new Intent(MainActivity.this, RecyclerViewSarShooneListActivity.class);
-                    startActivity(intent);
-                }
-                if (names[position] == "حرکات زیر بقل") {
-                    Intent intent = new Intent(MainActivity.this, RecyclerViewZirBaqalListActivity.class);
-                    startActivity(intent);
-                }
-                if (names[position] == "حرکات پشت بازو") {
-                    Intent intent = new Intent(MainActivity.this, RecyclerViewPoshBazooListActivity.class);
-                    startActivity(intent);
-                }
-                if (names[position] == "حرکات شکم ") {
-                    Intent intent = new Intent(MainActivity.this, RecyclerViewShekamListActivity.class);
-                    startActivity(intent);
-                }
-                if (names[position] == "حرکات ساعد") {
-                    Intent intent = new Intent(MainActivity.this, RecyclerViewSaedListActivity.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-    }
-
-    private int getNextKey(Realm realm) {
-        try {
-
-            Number number = realm.where(SarshooneModel.class).max("id");
-            if (number != null) {
-                return number.intValue() + 1;
-            } else {
-                return 0;
-            }
-
-        } catch (ArrayIndexOutOfBoundsException e) {
-
+        mokamelAvaliehModels = realm.where(MokamelAvaliehModel.class)
+                .findAll();
+        for (int i = 0; i < mokamelAvaliehModels.size(); i++) {
+            Log.d("runn", "execute: " + mokamelAvaliehModels.get(i).getId());
+            Log.d("runn", "execute: " + mokamelAvaliehModels.get(i).getName());
+            Log.d("runn", "execute: " + mokamelAvaliehModels.get(i).getImage_url());
+            Log.d("runn", "execute: " + mokamelAvaliehModels.get(i).getInformations());
         }
-        return 0;
-    }
 
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        int id = menuItem.getItemId();
-        if (id == R.id.bmi) {
-            Intent intent = new Intent(MainActivity.this, BMIActivity.class);
-            startActivity(intent);
+
+
+        Realm realm1 = Realm.getDefaultInstance();
+        mokamelPishrafteModels1 = realm1.where(MokamelPishrafteModel.class).equalTo("parentid",2)
+                .findAll();
+        for (int i = 0; i < mokamelPishrafteModels1.size(); i++) {
+            Log.d("runn", "execute: " + mokamelPishrafteModels1.get(i).getId());
+            Log.d("runn", "execute: " + mokamelPishrafteModels1.get(i).getName());
+            Log.d("runn", "execute: " + mokamelPishrafteModels1.get(i).getImage_url());
+            Log.d("runn", "execute: " + mokamelPishrafteModels1.get(i).getInformations());
         }
-        if (id == R.id.bmr) {
-            Intent intent = new Intent(MainActivity.this, BMRActivity.class);
-            startActivity(intent);
+
+
+
+
+        Realm realm2 = Realm.getDefaultInstance();
+        mokamelPishrafteModels2 = realm2.where(MokamelPishrafteModel.class).equalTo("parentid",3)
+                .findAll();
+        for (int i = 0; i < mokamelPishrafteModels2.size(); i++) {
+            Log.d("runn", "execute: " + mokamelPishrafteModels2.get(i).getId());
+            Log.d("runn", "execute: " + mokamelPishrafteModels2.get(i).getName());
+            Log.d("runn", "execute: " + mokamelPishrafteModels2.get(i).getImage_url());
+            Log.d("runn", "execute: " + mokamelPishrafteModels2.get(i).getInformations());
         }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-       // drawer.closeDrawer(GravityCompat.START);
-        return true;
+
+
+        Realm realm3 = Realm.getDefaultInstance();
+        mokamelPishrafteModels4 = realm3.where(MokamelPishrafteModel.class).equalTo("parentid",4)
+                .findAll();
+        for (int i = 0; i < mokamelPishrafteModels4.size(); i++) {
+            Log.d("runn", "execute: " + mokamelPishrafteModels4.get(i).getId());
+            Log.d("runn", "execute: " + mokamelPishrafteModels4.get(i).getName());
+            Log.d("runn", "execute: " + mokamelPishrafteModels4.get(i).getImage_url());
+            Log.d("runn", "execute: " + mokamelPishrafteModels4.get(i).getInformations());
+        }
+
+
+
+        Realm realm4 = Realm.getDefaultInstance();
+        mokamelPishrafteModels5 = realm4.where(MokamelPishrafteModel.class).equalTo("parentid",5)
+                .findAll();
+        for (int i = 0; i < mokamelPishrafteModels5.size(); i++) {
+            Log.d("runn", "execute: " + mokamelPishrafteModels5.get(i).getId());
+            Log.d("runn", "execute: " + mokamelPishrafteModels5.get(i).getName());
+            Log.d("runn", "execute: " + mokamelPishrafteModels5.get(i).getImage_url());
+            Log.d("runn", "execute: " + mokamelPishrafteModels5.get(i).getInformations());
+        }
+
+
+        Realm realm5 = Realm.getDefaultInstance();
+        mokamelPishrafteModels6 = realm5.where(MokamelPishrafteModel.class).equalTo("parentid",6)
+                .findAll();
+        for (int i = 0; i < mokamelPishrafteModels6.size(); i++) {
+            Log.d("runn", "execute: " + mokamelPishrafteModels6.get(i).getId());
+            Log.d("runn", "execute: " + mokamelPishrafteModels6.get(i).getName());
+            Log.d("runn", "execute: " + mokamelPishrafteModels6.get(i).getImage_url());
+            Log.d("runn", "execute: " + mokamelPishrafteModels6.get(i).getInformations());
+        }
+
+
+
+
+
+
+        MainActivityRecycler1Adapter adapter = new MainActivityRecycler1Adapter(mokamelAvaliehModels, MainActivity.this);
+        MainActivityRecycler2Adapter adapter2 = new MainActivityRecycler2Adapter(mokamelPishrafteModels1, MainActivity.this);
+        MainActivityRecycler4Adapter adapter4 = new MainActivityRecycler4Adapter(mokamelPishrafteModels2, MainActivity.this);
+        MainActivityRecycler5Adapter adapter5 = new MainActivityRecycler5Adapter(mokamelPishrafteModels4, MainActivity.this);
+        MainActivityRecycler6Adapter adapter6 = new MainActivityRecycler6Adapter(mokamelPishrafteModels5, MainActivity.this);
+        MainActivityRecycler7Adapter adapter7 = new MainActivityRecycler7Adapter(mokamelPishrafteModels6, MainActivity.this);
+
+
+        binding.setAdapter(adapter);
+        binding.setAdapter2(adapter2);
+        binding.setAdapter4(adapter4);
+        binding.setAdapter5(adapter5);
+        binding.setAdapter6(adapter6);
+        binding.setAdapter7(adapter7);
+
+
+
+
+
     }
 }

@@ -27,7 +27,7 @@ public class RecyclerViewPaaListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view_paa_list);
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_view_jolo_bazoo_list);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_view_paa_list);
 
         Realm realm = Realm.getDefaultInstance();
         paModels = realm.where(PaModel.class)

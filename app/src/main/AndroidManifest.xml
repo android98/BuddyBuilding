@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PlayVideoZirBaqalActivity"></activity>
+        <activity android:name=".activities.ShowInformationsSelectedActivity"></activity>
+        <activity android:name=".activities.RecyclerViewMainHarekatActivity" />
+        <activity android:name=".activities.RecyclerViewMokamelAvalieActivity" />
+        <activity android:name=".activities.SplashActivity" />
+        <activity android:name=".activities.PlayVideoZirBaqalActivity" />
         <activity android:name=".activities.PlayVideoShekamActivity" />
         <activity android:name=".activities.PlayVideoSarShooneActivity" />
         <activity android:name=".activities.PlayVideoSaedActivity" />
@@ -20,7 +24,7 @@
         <activity android:name=".activities.PlayVideoPaaActivity" />
         <activity android:name=".activities.PlayVideoPahlooActivity" />
         <activity android:name=".activities.PlayVideoJoloBazooActivity" />
-        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.RecyclerViewMokamelKaramadActivity" />
         <activity android:name=".activities.BMRActivity" />
         <activity android:name=".activities.BMIActivity" />
         <activity android:name=".activities.RecyclerViewZirBaqalListActivity" />
@@ -31,7 +35,7 @@
         <activity android:name=".activities.RecyclerViewPaaListActivity" />
         <activity android:name=".activities.RecyclerViewPahlooListActivity" />
         <activity android:name=".activities.RecyclerViewJoloBazooListActivity" />
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

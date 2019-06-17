@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.buddybuilding.models.MokamelPishrafteModel" />
+
+        <variable
+            name="MokamelPIshrafteClickListener"
+            type="com.example.buddybuilding.tools.MokamelPIshrafteClickListener" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:onClick="@{()-> MokamelPIshrafteClickListener.Clicked(model)}"
+        android:layout_margin="3dp"
+        android:background="@color/backgroung"
+        android:layoutDirection="rtl"
+        android:layout_height="wrap_content">
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:elevation="5dp"
+            android:background="@color/backgroung"
+            android:layout_margin="3dp"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="3dp"
+                android:layoutDirection="rtl"
+                android:layout_height="wrap_content">
+
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="130dp"
+                    android:layoutDirection="rtl"
+                    android:layout_margin="2dp"
+                    android:padding="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    app:profileImage="@{model.image_url}"
+                    android:layout_height="130dp" />
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="2dp"
+                    android:background="@color/cardview_light_background"
+                    android:layout_marginTop="5dp"
+                    android:layoutDirection="rtl"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/bnazanin"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:gravity="right"
+                        android:text="@{model.name}"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="3dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:textDirection="rtl"
+                        android:layoutDirection="rtl"
+                        android:layout_height="wrap_content" />
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/bnazanin"
+                        android:textSize="19sp"
+                        android:gravity="right"
+                        android:textDirection="rtl"
+                        android:layoutDirection="rtl"
+                        android:maxLines="3"
+                        android:text="@{model.informations}"
+                        android:layout_margin="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_height="60dp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/bnazanin"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/a"
+                        android:gravity="right"
+                        android:text="@{model.rotbe_bandi}"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="15dp"
+                        android:textDirection="rtl"
+                        android:layoutDirection="rtl"
+                        android:layout_height="24dp" />
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+</layout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.buddybuilding.models.MokamelAvaliehModel"></variable>
+
+        <variable
+            name="MokamelMobtadiClickListener"
+            type="com.example.buddybuilding.tools.MokamelMobtadiClickListener"></variable>
+    </data>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="150dp"
+        android:elevation="5dp"
+        android:layout_margin="4dp"
+        android:background="@color/backgroung"
+        android:layout_height="160dp">
+
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:layout_margin="5dp"
+     android:layoutDirection="rtl"
+     android:onClick="@{()-> MokamelMobtadiClickListener.Clicked(model)}"
+     android:layout_height="wrap_content">
+
+
+     <ImageView
+         android:layout_width="110dp"
+         app:profileImage="@{model.image_url}"
+         android:layout_margin="5dp"
+         android:padding="3dp"
+         android:layout_gravity="center"
+         android:fitsSystemWindows="true"
+         android:layout_height="110dp" />
+
+    <TextView
+        android:layout_width="150sp"
+        android:fontFamily="@font/bnazanin"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="@{model.name}" />
+
+
+ </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</layout>
