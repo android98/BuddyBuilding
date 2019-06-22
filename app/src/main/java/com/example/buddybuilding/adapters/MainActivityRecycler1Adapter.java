@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.example.buddybuilding.BR;
 import com.example.buddybuilding.R;
 import com.example.buddybuilding.activities.PlayVideoShekamActivity;
+import com.example.buddybuilding.activities.ShowInformationsSelected2Activity;
 import com.example.buddybuilding.activities.ShowInformationsSelectedActivity;
 import com.example.buddybuilding.databinding.ActivityInnerRecycler1Binding;
 import com.example.buddybuilding.databinding.ActivityInnerRecycler2Binding;
@@ -64,7 +65,7 @@ public class MainActivityRecycler1Adapter extends RecyclerView.Adapter<MainActiv
         Log.d("ttt", "execute: " + mokamelAvaliehModel.getImage_url());
         Log.d("ttt", "execute: " + mokamelAvaliehModel.getInformations());
 
-        Intent intent = new Intent(context, ShowInformationsSelectedActivity.class);
+        Intent intent = new Intent(context, ShowInformationsSelected2Activity.class);
         intent.putExtra("id", mokamelAvaliehModel.id);
         context.startActivity(intent);
 

@@ -3,19 +3,22 @@
     package="com.example.buddybuilding">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:name=".tools.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ShowInformationsSelectedActivity"></activity>
-        <activity android:name=".activities.RecyclerViewMainHarekatActivity" />
+        <activity android:name=".activities.RecyclerViewMainHarekatActivity"></activity>
+        <activity android:name=".activities.ShowInformationsSelected2Activity" />
+        <activity android:name=".activities.ShowInformationsSelectedActivity" />
+        <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.RecyclerViewMokamelAvalieActivity" />
-        <activity android:name=".activities.SplashActivity" />
+        <activity android:name=".activities.RecyclerViewMorabiansActivity" />
         <activity android:name=".activities.PlayVideoZirBaqalActivity" />
         <activity android:name=".activities.PlayVideoShekamActivity" />
         <activity android:name=".activities.PlayVideoSarShooneActivity" />
@@ -35,7 +38,7 @@
         <activity android:name=".activities.RecyclerViewPaaListActivity" />
         <activity android:name=".activities.RecyclerViewPahlooListActivity" />
         <activity android:name=".activities.RecyclerViewJoloBazooListActivity" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,6 +1,7 @@
 package com.example.buddybuilding.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.buddybuilding.BR;
 import com.example.buddybuilding.R;
+import com.example.buddybuilding.activities.ShowInformationsSelectedActivity;
 import com.example.buddybuilding.databinding.ActivityInnerRecycler2Binding;
 import com.example.buddybuilding.models.MokamelPishrafteModel;
 import com.example.buddybuilding.tools.MokamelPIshrafteClickListener;
@@ -54,7 +56,12 @@ public class MainActivityRecycler4Adapter extends RecyclerView.Adapter<MainActiv
         Log.d("ttt", "execute: " + mokamelPishrafteModel.getId());
         Log.d("ttt", "execute: " + mokamelPishrafteModel.getName());
         Log.d("ttt", "execute: " + mokamelPishrafteModel.getImage_url());
-        Log.d("ttt", "execute: " + mokamelPishrafteModel.getInformations());    }
+        Log.d("ttt", "execute: " + mokamelPishrafteModel.getInformations());
+
+        Intent intent = new Intent(context, ShowInformationsSelectedActivity.class);
+        intent.putExtra("id", mokamelPishrafteModel.getId());
+        context.startActivity(intent);
+    }
 
 
     public class CustomView extends RecyclerView.ViewHolder {

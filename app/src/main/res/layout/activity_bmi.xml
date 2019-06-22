@@ -10,25 +10,21 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="2dp"
-        android:layout_marginTop="5dp"
         android:elevation="5dp">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bmi"
             android:orientation="vertical">
 
 
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_margin="5dp"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -40,6 +36,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/bnazanin"
                 android:gravity="center"
+                android:layout_marginTop="15dp"
                 android:text="محاسبه BMI "
                 android:textColor="@color/black"
                 android:textSize="25dp" />
@@ -68,7 +65,7 @@
                     android:gravity="right"
                     android:text="قد ( متر ) "
                     android:textColor="@color/black"
-                    android:textSize="22dp" />
+                    android:textSize="30sp" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -78,7 +75,7 @@
                     android:gravity="right"
                     android:id="@+id/edtgad"
                     android:textColor="@color/black"
-                    android:textSize="22dp" />
+                    android:textSize="27sp" />
 
 
             </LinearLayout>
@@ -101,7 +98,7 @@
                     android:gravity="right"
                     android:text="وزن ( کیلوگرم ) "
                     android:textColor="@color/black"
-                    android:textSize="22dp" />
+                    android:textSize="30sp" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -111,7 +108,7 @@
                     android:gravity="right"
                     android:textColor="@color/black"
                     android:id="@+id/edtvazn"
-                    android:textSize="22dp" />
+                    android:textSize="27sp" />
 
                 <TextView
                     android:layout_width="200dp"
@@ -135,7 +132,8 @@
                 android:layout_marginTop="10dp"
                 android:id="@+id/btnmohasebe"
                 android:fontFamily="@font/bnazanin"
-                android:textSize="20sp"
+                android:textSize="25sp"
+                android:importantForAutofill="auto"
                 android:gravity="center"
                 android:text="محاسبه" />
 
@@ -156,8 +154,8 @@
                     android:fontFamily="@font/bnazanin"
                     android:id="@+id/txtnumnatije"
                     android:gravity="center"
-                    android:textColor="@color/a"
-                    android:textSize="30dp" />
+                    android:textColor="@color/black"
+                    android:textSize="50sp" />
 
                 <TextView
                     android:layout_width="300dp"
@@ -168,8 +166,8 @@
                     android:layout_marginBottom="15dp"
                     android:id="@+id/txttozihnatije"
                     android:gravity="center"
-                    android:textColor="@color/a"
-                    android:textSize="25dp" />
+                    android:textColor="@color/black"
+                    android:textSize="40sp" />
 
 
 

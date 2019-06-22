@@ -1,6 +1,7 @@
 package com.example.buddybuilding.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,8 @@ import android.view.ViewGroup;
 
 import com.example.buddybuilding.BR;
 import com.example.buddybuilding.R;
+import com.example.buddybuilding.activities.PlayVideoPaaActivity;
+import com.example.buddybuilding.activities.ShowInformationsSelected2Activity;
 import com.example.buddybuilding.databinding.ActivityInnerRecyclerJoloBazooBinding;
 import com.example.buddybuilding.databinding.ActivityInnerRecyclerMokamelMobtadianBinding;
 import com.example.buddybuilding.models.JolobazooModel;
@@ -66,6 +69,9 @@ implements MokamelMobtadiClickListener {
         Log.d("tests", "Clicked: " + mokamelAvaliehModel.getName());
         Log.d("tests", "Clicked: " + mokamelAvaliehModel.getInformations());
         Log.d("tests", "Clicked: " + mokamelAvaliehModel.getImage_url());
+        Intent intent = new Intent(context, ShowInformationsSelected2Activity.class);
+        intent.putExtra("id", mokamelAvaliehModel.id);
+        context.startActivity(intent);
     }
 
 

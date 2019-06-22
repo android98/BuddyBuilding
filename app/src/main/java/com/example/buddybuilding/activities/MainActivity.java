@@ -1,9 +1,17 @@
 package com.example.buddybuilding.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.buddybuilding.R;
 import com.example.buddybuilding.adapters.MainActivityRecycler1Adapter;
@@ -35,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         Realm realm = Realm.getDefaultInstance();
@@ -48,10 +58,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-
         Realm realm1 = Realm.getDefaultInstance();
-        mokamelPishrafteModels1 = realm1.where(MokamelPishrafteModel.class).equalTo("parentid",2)
+        mokamelPishrafteModels1 = realm1.where(MokamelPishrafteModel.class).equalTo("parentid", 2)
                 .findAll();
         for (int i = 0; i < mokamelPishrafteModels1.size(); i++) {
             Log.d("runn", "execute: " + mokamelPishrafteModels1.get(i).getId());
@@ -61,10 +69,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-
         Realm realm2 = Realm.getDefaultInstance();
-        mokamelPishrafteModels2 = realm2.where(MokamelPishrafteModel.class).equalTo("parentid",3)
+        mokamelPishrafteModels2 = realm2.where(MokamelPishrafteModel.class).equalTo("parentid", 3)
                 .findAll();
         for (int i = 0; i < mokamelPishrafteModels2.size(); i++) {
             Log.d("runn", "execute: " + mokamelPishrafteModels2.get(i).getId());
@@ -75,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Realm realm3 = Realm.getDefaultInstance();
-        mokamelPishrafteModels4 = realm3.where(MokamelPishrafteModel.class).equalTo("parentid",4)
+        mokamelPishrafteModels4 = realm3.where(MokamelPishrafteModel.class).equalTo("parentid", 4)
                 .findAll();
         for (int i = 0; i < mokamelPishrafteModels4.size(); i++) {
             Log.d("runn", "execute: " + mokamelPishrafteModels4.get(i).getId());
@@ -85,9 +91,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
         Realm realm4 = Realm.getDefaultInstance();
-        mokamelPishrafteModels5 = realm4.where(MokamelPishrafteModel.class).equalTo("parentid",5)
+        mokamelPishrafteModels5 = realm4.where(MokamelPishrafteModel.class).equalTo("parentid", 5)
                 .findAll();
         for (int i = 0; i < mokamelPishrafteModels5.size(); i++) {
             Log.d("runn", "execute: " + mokamelPishrafteModels5.get(i).getId());
@@ -98,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Realm realm5 = Realm.getDefaultInstance();
-        mokamelPishrafteModels6 = realm5.where(MokamelPishrafteModel.class).equalTo("parentid",6)
+        mokamelPishrafteModels6 = realm5.where(MokamelPishrafteModel.class).equalTo("parentid", 6)
                 .findAll();
         for (int i = 0; i < mokamelPishrafteModels6.size(); i++) {
             Log.d("runn", "execute: " + mokamelPishrafteModels6.get(i).getId());
@@ -106,10 +111,6 @@ public class MainActivity extends AppCompatActivity {
             Log.d("runn", "execute: " + mokamelPishrafteModels6.get(i).getImage_url());
             Log.d("runn", "execute: " + mokamelPishrafteModels6.get(i).getInformations());
         }
-
-
-
-
 
 
         MainActivityRecycler1Adapter adapter = new MainActivityRecycler1Adapter(mokamelAvaliehModels, MainActivity.this);
@@ -128,8 +129,7 @@ public class MainActivity extends AppCompatActivity {
         binding.setAdapter7(adapter7);
 
 
-
-
-
     }
+
+
 }

@@ -3,21 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <group>
-        <item android:id="@+id/mainpage"
-            android:title="صفحه اصلی">
-        </item>
 
-        <item android:id="@+id/bmi"
-            android:title="محاسه BMI">
-        </item>
 
-        <item android:id="@+id/bmr"
-            android:title="محاسبه BMR">
-        </item>
+        <item
+            android:id="@+id/mainpage"
+            android:title="صفحه اصلی"></item>
 
-        <item android:id="@+id/aboutus"
-            android:title="درباره ما">
-        </item>
+        <item
+            android:id="@+id/mokamels"
+            android:title="مکمل ها "></item>
+        <item
+            android:id="@+id/morabians"
+            android:title="مربیان معروف"></item>
+
+
+        <item
+            android:id="@+id/bmi"
+            android:title="محاسه BMI"></item>
+
+        <item
+            android:id="@+id/bmr"
+            android:title="محاسبه BMR"></item>
+
+        <item
+            android:id="@+id/aboutus"
+            android:title="درباره ما"></item>
     </group>
 
 

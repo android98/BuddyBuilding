@@ -20,8 +20,10 @@ public class BMIActivity extends AppCompatActivity {
 
     public double qad;
     public double vazn;
-
     public Dialog d;
+
+
+
 
 
     @Override

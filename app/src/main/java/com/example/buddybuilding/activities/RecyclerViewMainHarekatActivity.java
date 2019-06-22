@@ -50,8 +50,8 @@ public class RecyclerViewMainHarekatActivity extends AppCompatActivity implement
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_view_main_harekat);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -161,6 +161,18 @@ public class RecyclerViewMainHarekatActivity extends AppCompatActivity implement
             Intent intent = new Intent(RecyclerViewMainHarekatActivity.this, BMRActivity.class);
             startActivity(intent);
         }
+        if (id == R.id.mokamels) {
+            Intent intent = new Intent(RecyclerViewMainHarekatActivity.this, MainActivity.class);
+            startActivity(intent);
+
+        }
+
+
+        if (id == R.id.morabians) {
+            Intent intent = new Intent(RecyclerViewMainHarekatActivity.this, RecyclerViewMorabiansActivity.class);
+            startActivity(intent);
+        }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
        // drawer.closeDrawer(GravityCompat.START);
         return true;
