@@ -18,7 +18,6 @@
         <activity android:name=".activities.ShowInformationsSelectedActivity" />
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.RecyclerViewMokamelAvalieActivity" />
-        <activity android:name=".activities.RecyclerViewMorabiansActivity" />
         <activity android:name=".activities.PlayVideoZirBaqalActivity" />
         <activity android:name=".activities.PlayVideoShekamActivity" />
         <activity android:name=".activities.PlayVideoSarShooneActivity" />

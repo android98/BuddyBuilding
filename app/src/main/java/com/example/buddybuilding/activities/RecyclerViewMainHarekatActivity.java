@@ -168,11 +168,6 @@ public class RecyclerViewMainHarekatActivity extends AppCompatActivity implement
         }
 
 
-        if (id == R.id.morabians) {
-            Intent intent = new Intent(RecyclerViewMainHarekatActivity.this, RecyclerViewMorabiansActivity.class);
-            startActivity(intent);
-        }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
        // drawer.closeDrawer(GravityCompat.START);
         return true;
