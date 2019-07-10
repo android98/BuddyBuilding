@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "568782871974",
+    "firebase_url": "https://buddybuilding-204c3.firebaseio.com",
+    "project_id": "buddybuilding-204c3",
+    "storage_bucket": "buddybuilding-204c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568782871974:android:cb8e5d27a0e46974",
+        "android_client_info": {
+          "package_name": "com.example.buddybuilding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568782871974-vp3m9kjnvu6ukpuh9n4p1hvsmb73cv26.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.buddybuilding",
+            "certificate_hash": "a3a4fac9d53fa011b952a9a379076d0f94c2e41d"
+          }
+        },
+        {
+          "client_id": "568782871974-86groea2oi9hnsqmq5ion97h06okd1is.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAosh8xbDITAqSx71fTtdYGt8Qe1Yfi9i4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568782871974-86groea2oi9hnsqmq5ion97h06okd1is.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

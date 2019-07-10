@@ -1,19 +1,15 @@
 package com.example.buddybuilding.adapters;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.databinding.DataBindingUtil;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.buddybuilding.R;
 import com.example.buddybuilding.databinding.MorabiBinding;
-import com.example.buddybuilding.models.MorabiModel;
-import com.example.buddybuilding.tools.MorabianClickListener;
 import com.example.buddybuilding.viewmodel.MorabiViewModel;
 
 import java.util.ArrayList;

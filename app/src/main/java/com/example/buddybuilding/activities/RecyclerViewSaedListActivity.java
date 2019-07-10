@@ -1,17 +1,14 @@
 package com.example.buddybuilding.activities;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.buddybuilding.R;
-import com.example.buddybuilding.adapters.RecyclerAdapterShowJoloBazooAdapter;
 import com.example.buddybuilding.adapters.RecyclerAdapterShowSaedAdapter;
-import com.example.buddybuilding.databinding.ActivityRecyclerViewJoloBazooListBinding;
 import com.example.buddybuilding.databinding.ActivityRecyclerViewSaedListBinding;
-import com.example.buddybuilding.models.JolobazooModel;
 import com.example.buddybuilding.models.SaedModel;
 
 import io.realm.Realm;

@@ -2,9 +2,9 @@ package com.example.buddybuilding.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.databinding.DataBindingUtil;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -12,9 +12,7 @@ import android.view.ViewGroup;
 import com.example.buddybuilding.BR;
 import com.example.buddybuilding.R;
 import com.example.buddybuilding.activities.ShowInformationsSelectedActivity;
-import com.example.buddybuilding.databinding.ActivityInnerRecycler1Binding;
 import com.example.buddybuilding.databinding.ActivityInnerRecycler2Binding;
-import com.example.buddybuilding.models.MokamelAvaliehModel;
 import com.example.buddybuilding.models.MokamelPishrafteModel;
 import com.example.buddybuilding.tools.MokamelPIshrafteClickListener;
 

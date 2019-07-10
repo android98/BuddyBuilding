@@ -1,13 +1,11 @@
 package com.example.buddybuilding.models;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
-
-import javax.crypto.interfaces.PBEKey;
 
 public class MorabiListModel extends ViewModel {
 

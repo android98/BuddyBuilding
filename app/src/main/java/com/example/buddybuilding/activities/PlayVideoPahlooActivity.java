@@ -5,16 +5,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.example.buddybuilding.R;
-import com.example.buddybuilding.models.JolobazooModel;
 import com.example.buddybuilding.models.PahlooModel;
 
 import io.realm.Realm;
@@ -41,7 +39,7 @@ public class PlayVideoPahlooActivity extends AppCompatActivity {
         name = intent.getStringExtra("name");
 
 
-        AlertDialogLoding();
+        //AlertDialogLoding();
         PahlooQueryDB();
 
 

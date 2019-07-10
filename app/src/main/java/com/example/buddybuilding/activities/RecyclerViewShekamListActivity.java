@@ -1,18 +1,15 @@
 package com.example.buddybuilding.activities;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.buddybuilding.R;
 import com.example.buddybuilding.adapters.RecyclerAdapterShowShekamAdapter;
-import com.example.buddybuilding.adapters.RecyclerAdapterShowZirBaqalAdapter;
 import com.example.buddybuilding.databinding.ActivityRecyclerViewShekamListBinding;
-import com.example.buddybuilding.databinding.ActivityRecyclerViewZirBaqalListBinding;
 import com.example.buddybuilding.models.ShekamModel;
-import com.example.buddybuilding.models.ZirbaqalModel;
 
 import io.realm.Realm;
 import io.realm.RealmResults;

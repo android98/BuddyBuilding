@@ -2,19 +2,16 @@ package com.example.buddybuilding.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.databinding.DataBindingUtil;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.example.buddybuilding.BR;
 import com.example.buddybuilding.R;
-import com.example.buddybuilding.activities.PlayVideoJoloBazooActivity;
 import com.example.buddybuilding.activities.PlayVideoSarShooneActivity;
-import com.example.buddybuilding.databinding.ActivityInnerRecyclerSaedBinding;
 import com.example.buddybuilding.databinding.ActivityInnerRecyclerSarshooneBinding;
-import com.example.buddybuilding.models.SaedModel;
 import com.example.buddybuilding.models.SarshooneModel;
 import com.example.buddybuilding.tools.SarshooneCLickListener;
 

@@ -1,7 +1,7 @@
 package com.example.buddybuilding.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
@@ -9,9 +9,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.buddybuilding.R;
-import com.example.buddybuilding.adapters.RecyclerAdapterShowZirBaqalAdapter;
 import com.example.buddybuilding.models.MokamelPishrafteModel;
-import com.example.buddybuilding.models.ZirbaqalModel;
 
 import io.realm.Realm;
 import io.realm.RealmResults;

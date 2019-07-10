@@ -1,11 +1,10 @@
 package com.example.buddybuilding.viewmodel;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
-import android.databinding.BindingAdapter;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
+import androidx.databinding.BindingAdapter;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.example.buddybuilding.models.MorabiModel;
 import com.example.buddybuilding.remote.MorabiRepository;
 import com.squareup.picasso.Picasso;

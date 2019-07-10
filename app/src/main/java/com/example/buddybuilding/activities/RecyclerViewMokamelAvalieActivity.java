@@ -1,22 +1,17 @@
 package com.example.buddybuilding.activities;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.buddybuilding.R;
-import com.example.buddybuilding.adapters.RecyclerAdapterShowJoloBazooAdapter;
 import com.example.buddybuilding.adapters.RecyclerAdapterShowMokamelMobtadiAdapter;
-import com.example.buddybuilding.databinding.ActivityRecyclerViewJoloBazooListBinding;
 import com.example.buddybuilding.databinding.ActivityRecyclerViewMokamelAvalieBinding;
-import com.example.buddybuilding.models.JolobazooModel;
 import com.example.buddybuilding.models.MokamelAvaliehModel;
 import com.example.buddybuilding.models.MokamelPishrafteModel;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -50,7 +45,8 @@ public class RecyclerViewMokamelAvalieActivity extends AppCompatActivity {
             Log.d("runn", "execute: " + mokamelAvaliehModels.get(i).getParentid());
         }
         RecyclerAdapterShowMokamelMobtadiAdapter adapterShowMokamelMobtadiAdapter =
-                new RecyclerAdapterShowMokamelMobtadiAdapter(RecyclerViewMokamelAvalieActivity.this, mokamelAvaliehModels);
+                new RecyclerAdapterShowMokamelMobtadiAdapter(RecyclerViewMokamelAvalieActivity.this
+                        , mokamelAvaliehModels);
 
         binding.setAdapter(adapterShowMokamelMobtadiAdapter);
 

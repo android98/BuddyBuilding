@@ -1,16 +1,16 @@
 package com.example.buddybuilding.activities;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.example.buddybuilding.R;
@@ -37,14 +37,11 @@ public class PlayVideoJoloBazooActivity extends AppCompatActivity {
         id = intent.getIntExtra("id", -1);
         name = intent.getStringExtra("name");
 
-
         AlertDialogLoding();
         JoloBazooQueryDB();
 
 
-
     }
-
 
 
     private void JoloBazooQueryDB() {
@@ -65,8 +62,6 @@ public class PlayVideoJoloBazooActivity extends AppCompatActivity {
             //Toast.makeText(this, ""+duration, Toast.LENGTH_SHORT).show();
 
 
-
-
         }
     }
 
@@ -77,6 +72,7 @@ public class PlayVideoJoloBazooActivity extends AppCompatActivity {
     }
 
     public void AlertDialogLoding() {
+
         progressDialog = new ProgressDialog(PlayVideoJoloBazooActivity.this);
         progressDialog.setTitle("در حال بارگذاری");
         progressDialog.setCancelable(false);
@@ -91,13 +87,10 @@ public class PlayVideoJoloBazooActivity extends AppCompatActivity {
             public void run() {
                 try {
                     while (progressDialog.getProgress() <= progressDialog.getMax()) {
-
-                        Thread.sleep(60);
-
+                        Thread.sleep(30);
                         handler.sendMessage(handler.obtainMessage());
                         if (progressDialog.getProgress() == progressDialog.getMax()) {
                             progressDialog.dismiss();
-
                         }
                     }
 
@@ -110,6 +103,8 @@ public class PlayVideoJoloBazooActivity extends AppCompatActivity {
 
     }
 
+
+    @SuppressLint("HandlerLeak")
     Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {

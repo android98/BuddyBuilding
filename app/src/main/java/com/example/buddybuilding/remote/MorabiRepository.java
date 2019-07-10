@@ -1,9 +1,8 @@
 package com.example.buddybuilding.remote;
 
-import android.arch.lifecycle.MutableLiveData;
+import androidx.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.buddybuilding.models.MorabiListModel;
 import com.example.buddybuilding.models.MorabiModel;
@@ -14,7 +13,6 @@ import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class MorabiRepository {
 
