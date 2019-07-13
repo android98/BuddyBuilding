@@ -1,6 +1,8 @@
 package com.example.buddybuilding.activities;
 
 import android.content.Context;
+
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.databinding.DataBindingUtil;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,7 +29,7 @@ public class RecyclerViewJoloBazooListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view_jolo_bazoo_list);
-        profile_image = findViewById(R.id.profile_image);
+
 
         // Bindign JoloBazoo
         binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_view_jolo_bazoo_list);

@@ -33,11 +33,11 @@ public class BMIActivity extends AppCompatActivity {
         bind();
 
 
-        d = new BottomSheetDialog(this);
+       /* d = new BottomSheetDialog(this);
         d.setContentView(R.layout.layout_bmi_bottom_sheet_dialog);
         d.setCancelable(true);
         d.show();
-
+*/
 
         textViewnumnatije.setEnabled(false);
         textViewtoziatnatije.setEnabled(false);

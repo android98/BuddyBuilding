@@ -11,6 +11,8 @@
     tools:context=".activities.RecyclerViewMainHarekatActivity">
 
 
+
+
     <GridView
         android:id="@+id/grid_view_"
         android:layout_width="match_parent"
